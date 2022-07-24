@@ -13,174 +13,245 @@
   --Poppins: "Poppins", sans-serif;
 }
 
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: var(--Open-Sans);
+  font-family: var(--Open-Sans);
+  line-height: 1.8;
+  overflow-x: hidden;
 }
 
-h1,h2,h3 {
-    font-family: var(--Poppins);
+h1,
+h2,
+h3 {
+  font-family: var(--Poppins);
 }
 
 a {
-    text-decoration: none;
-    color: #FFF;
+  text-decoration: none;
+  color: #fff;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .container-fluid {
-    padding: 3rem 3rem;
+  padding: 3rem;
 }
 
 .heading-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Nav */
 
 .logo {
-    width: 7rem;
+  width: 7rem;
 }
 
 .container {
-    padding: 1rem 2rem
+  padding: 1rem 2rem;
 }
 
 .btn-outline-pink {
-    color: var(--Pink);
-    border: 1px solid var(--Pink);
-    border-radius: 100px;
-    padding: .5rem 1.5rem;
+  color: var(--Pink);
+  border: 1px solid var(--Pink);
+  border-radius: 100px;
+  padding: 0.5rem 1.5rem;
 }
 
 .btn-outline-pink:hover {
-    background-color: var(--Pink);
-    border: 1px solid var(--Pink);
-    color: #FFF;
+  background-color: var(--Pink);
+  border: 1px solid var(--Pink);
+  color: #fff;
 }
 
 /* Intro  */
 
 .intro {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-pink {
-    color: #FFF;
-    border: 1px solid var(--Pink);
-    background-color: var(--Pink);
-    border-radius: 100px;
-    padding: .5rem 2rem;
+  color: #fff;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+  border-radius: 100px;
+  padding: 0.5rem 2rem;
 }
 
 .btn-pink:hover {
-    color: #FFF;
-    border: 1px solid var(--Pink);
-    background-color: var(--Pink);
-    opacity: .7;
+  color: #fff;
+  border: 1px solid var(--Pink);
+  background-color: var(--Pink);
+  opacity: 0.7;
 }
 
 .intro-btn {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 /* Community and Message Counts Section  */
 
 .icon {
-    width: 2rem;
-    /* Base on the design - Can delete this if you're not comfortable in left aligned icon, for me it's much better when it was centered*/
-    /* position: relative;
+  width: 2rem;
+  /* Base on the design - Can delete this if you're not comfortable in left aligned icon, for me it's much better when it was centered*/
+  /* position: relative;
     right: 30%; */
 }
 
 .counts {
-    text-align: center;
-    margin-bottom: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .counts__num {
-    font-size: 4rem;
-    font-weight: 700;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .counts__text {
-    color: grey;
+  color: grey;
 }
 
 /* Features  */
 
 .features {
-    text-align: center;
+  text-align: center;
 }
 
 .pale-feature {
-    background-color: var(--Very-Pale-Blue);
+  background-color: var(--Very-Pale-Blue);
 }
 
 .feature-img {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
-
 
 /* Call to Action  */
 
 .cta {
-    text-align: center;
-    padding: 10rem 0;
+  text-align: center;
+  padding: 10rem 0;
 }
 
 /* Newsletter  */
 
-.logo-newsletter{
-    width: 13rem;
+.logo-newsletter {
+  width: 13rem;
 }
 
 .newsletter {
-    background-color: var(--Very-Dark-Cyan);
-    color: #FFF;
-    display: flex;
-    flex-direction: column-reverse;
+  background-color: var(--Very-Dark-Cyan);
+  color: #fff;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .newsletter__subscription {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 .form-subscription {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-subscribe {
-    align-self: flex-end;
+  align-self: flex-end;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.desktop-section {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.3rem;
+  }
+  .mobile-section {
+    display: none;
+  }
+
+  .desktop-section {
+    display: inline-block;
+  }
+
+  .container-fluid {
+    width: 100%;
+  }
+
+  .heading-title {
+    font-size: 3rem;
+  }
+
+  .logo {
+    width: 12rem;
+  }
+
+  .btn-outline-pink {
+    padding: 0.7rem 3rem;
+  }
+
+  .btn-pink:not(.btn-subscribe) {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+  }
+
+  .intro__text {
+    width: 60%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .counts__num {
+    font-size: 5rem;
+  }
+
+  .counts__text {
+    font-size: 1.5rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .feature-img,
+  .feature-detail {
+    width: 50%;
+    text-align: left;
+  }
+
+  .newsletter {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+
+  .form-subscription {
+    flex-direction: row;
+    gap: 0.7rem;
+  }
+
+  .btn-subscribe {
+    align-self: center;
+  }
 }
